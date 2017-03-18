@@ -30,8 +30,6 @@ namespace PlayMusic
             }
         }
 
-
-
         /// <summary>
         /// 渐出效果
         /// </summary>

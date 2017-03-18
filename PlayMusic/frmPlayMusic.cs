@@ -266,9 +266,6 @@ namespace PlayMusic
             if (listMusicMenu.Items.Count == 0)
             {
                 MessageBox.Show("请添加音乐文件.", "操作提示");
-                this.Height = 383;
-                groupMenu.Visible = true;
-                picMenu.Tag = 2;
                 return;
             }
             else
