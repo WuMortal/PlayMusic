@@ -25,7 +25,6 @@ namespace PlayMusic
                 MessageBox.Show("程序已运行!", "提示");
                 return;
             }
-
             Application.Run(new frmPlayMusic());
         }
     }

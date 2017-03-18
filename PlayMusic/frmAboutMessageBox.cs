@@ -43,7 +43,6 @@ namespace PlayMusic
         /// </summary>
         public string AboutSoftware { get; set; }
 
-
         private void frmMessageBox_Load(object sender, EventArgs e)
         {
             frmPlayMusic fpm = new frmPlayMusic();
@@ -68,11 +67,6 @@ namespace PlayMusic
             lblOK.Location = new Point(lblOK.Left - 2, lblOK.Top - 2);
         }
 
-
-        /// <summary>
-        /// 渐入动画
-        /// </summary>
-        /// <param name="sender"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             FormFlash.EnterForm(this, timer1);
