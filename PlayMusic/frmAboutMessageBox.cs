@@ -48,7 +48,7 @@ namespace PlayMusic
             frmPlayMusic fpm = new frmPlayMusic();
             this.Location = new Point(fpm.Left+100,fpm.Top-60);
             SetShadow();
-            AboutSoftware = "MLMP:1.0\r\nWumeng 版权所有@2017\r\n更新日期:2017-3-18\r\nMiniMusicLocalPlay是一款小巧玲珑的本地播放器。\r\n邮箱地址:wumengnokia@outlook.com\r\n免责声明: 本产品中提供的软件之著作权归软件作者所有。用户可以自由选择是否使用本产品提供的软件。如果用户下载、安装、使用本产品中所提供的软件，即表明用户信任该软件作者，对任何原因在使用本产品中提供的软件时可能对用户自己或他人造成的任何形式的损失和伤害不承担责任。";
+            AboutSoftware = "MLMP:1.0\r\n版权所有@Wumeng  2017\r\n更新日期:2017-3-18\r\nMiniMusicLocalPlay是一款小巧玲珑的本地播放器。\r\n邮箱地址:wumengnokia@outlook.com\r\n免责声明: 本产品中提供的软件之著作权归软件作者所有。用户可以自由选择是否使用本产品提供的软件。如果用户下载、安装、使用本产品中所提供的软件，即表明用户信任该软件作者，对任何原因在使用本产品中提供的软件时可能对用户自己或他人造成的任何形式的损失和伤害不承担责任。";
             txtAboutText.Text = AboutSoftware;
         }
 
