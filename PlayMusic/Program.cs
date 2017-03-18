@@ -22,7 +22,6 @@ namespace PlayMusic
             //判断程序进程是否存在
             if (Process.GetProcessesByName("PlayMusic").Length > 1)
             {
-                MessageBox.Show("程序已运行!", "提示");
                 return;
             }
             Application.Run(new frmPlayMusic());
