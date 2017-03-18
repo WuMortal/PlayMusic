@@ -445,6 +445,7 @@ namespace PlayMusic
                 listMusicMenu.Items.RemoveAt(listMusicMenu.SelectedIndex);
             }
             SaveMusicListFile.SaveMusicList(listPath);
+            SetMusicNumber();
         }
 
         /// <summary>
