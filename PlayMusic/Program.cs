@@ -4,7 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// 作者:Wumeng
+/// 结束时间:2015-3-18
+/// 邮箱:1170621609@qq.com
+/// </summary>
 namespace PlayMusic
 {
     static class Program
