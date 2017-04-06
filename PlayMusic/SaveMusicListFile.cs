@@ -15,8 +15,7 @@ namespace PlayMusic
         /// <param name="objStudent"></param>
         public static void SaveMusicList(List<string> listPath)
         {
-           
-            //保存对象到文本文件
+            //保存歌曲信息到文本文件
             FileStream fs = new FileStream("PlaysList.pls", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             for (int i = 0; i < listPath.Count; i++)
@@ -50,7 +49,7 @@ namespace PlayMusic
                 }
                 
             }
-            fs.Close();
+            sr.Close();
             fs.Close();
         }
         
