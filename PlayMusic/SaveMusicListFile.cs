@@ -49,9 +49,9 @@ namespace PlayMusic
                 }
                 
             }
-            sr.Close();
+            fs.Close();
             fs.Close();
         }
-        
+
     }
 }

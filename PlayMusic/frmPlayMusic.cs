@@ -314,7 +314,7 @@ namespace PlayMusic
 
         List<string> listPath = new List<string>();     //存储音乐文件全路径
         int addMusicNumber = 0;
-        string[] musicName;
+        List<string> musicName=new List<string>();
         /// <summary>
         /// 添加音乐
         /// </summary>
@@ -560,16 +560,10 @@ namespace PlayMusic
         /// <param name="i"></param>
         private void AddMusicListMenu(int i)
         {
-
             //判断是否为第一次添加音乐
             if (addMusicNumber == 0)
             {
-                //分割歌曲名个歌手
-                musicName = Path.GetFileNameWithoutExtension(listPath[i]).Split('-');
-                if (musicName[1].Length >= 10)
-                {
-                    musicName[1] = musicName[1].Substring(0, 10) + "...";
-                }
+                SplitMusicName(i);
 
                 //限制最大长度
                 byte[] data = Encoding.Default.GetBytes(musicName[1]);
@@ -594,7 +588,7 @@ namespace PlayMusic
             }
             else
             {
-                string[] musicName = Path.GetFileNameWithoutExtension(listPath[listPath.Count - 1]).Split('-');
+                SplitMusicName(listMusicMenu.Items.Count);
                 if (musicName[1].Length >= 10)
                 {
                     musicName[1] = musicName[1].Substring(0, 10) + "...";
@@ -615,10 +609,31 @@ namespace PlayMusic
                     }
 
                 }
-
                 string newMusicName = Encoding.Default.GetString(data2);
                 musicName[1] = newMusicName;
                 listMusicMenu.Items.Add(musicName[1] + " " + musicName[0]);
+            }
+            musicName.RemoveAll(n => true);
+        }
+
+        /// <summary>
+        /// 分割歌曲名
+        /// </summary>
+        /// <param name="i"></param>
+        private void SplitMusicName(int i)
+        {
+            //分割歌曲名个歌手
+            foreach (string item in Path.GetFileNameWithoutExtension(listPath[i]).Split('-'))
+            {
+                musicName.Add(item);
+            }
+            if (musicName.Count < 2)
+            {
+                musicName.Insert(0, "未知歌手");
+            }
+            if (musicName[1].Length >= 10)
+            {
+                musicName[1] = musicName[1].Substring(0, 10) + "...";
             }
         }
 
